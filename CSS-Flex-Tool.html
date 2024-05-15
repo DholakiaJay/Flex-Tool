@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      input {
+        display: none;
+      }
+      body
+      {
+        background-image: url("https://i0.wp.com/mymathresources.com/wp-content/uploads/2020/08/xy-Axis-Poster-10-1.png?resize=512%2C512&ssl=1");
+        background-position: right;
+    
+        background-repeat: no-repeat;
+        backdrop-filter: blur(1px);
+        background-size: 550px 650px;
+      }
+      
+      .pro {
+        background-color: whitesmoke;
+        width: fit-content;
+        color: black;
+        border-radius: 12px;
+        padding: 5px;
+        font: 900;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        gap: 12px;
+        margin-top:5px;
+        margin-left:5px;
+        
+      }
+
+      .pro span {
+        border-top: 2px solid silver;
+        border-right: 3px solid silver;
+        border-radius: 5px;
+        padding: 3px;
+      }
+      .pro span:hover {
+        border-top: 2px solid grey;
+        border-right: 3px solid grey;
+        border-radius: 5px;
+        padding: 3px;
+        background-color: grey;
+        color: white;
+      }
+      /* space-between */
+      .box {
+        position: fixed;
+        left: 30%;
+        top: 3%;
+        opacity: 0;
+      }
+      .container {
+        background-color: whitesmoke;
+        border: 2px solid grey;
+        border-radius: 25px;
+        height: 500px;
+        width: 600px;
+        display: flex;
+        justify-content: space-between;
+      }
+      #space-between:checked + .box {
+        opacity: 1;
+      }
+
+      /* left */
+      .box1 {
+        position: fixed;
+        left: 30%;
+        top: 3%;
+        opacity: 0;
+      }
+      .container1 {
+        background-color: whitesmoke;
+        border: 2px solid grey;
+        border-radius: 25px;
+        height: 500px;
+        width: 600px;
+        display: flex;
+        justify-content: flex-start;
+      }
+      .item {
+        height: 63px;
+        width: 60px;
+        color: white;
+        border-radius: 12px;
+        background-color: orangered;
+        border: 2px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .code {
+        background-color: rgba(192, 192, 192, 0.221);
+        color: orangered;
+        width: 600px;
+        font: 900;
+        font-size: large;
+        padding: 5px;
+        text-align: left;
+        border-radius: 15px;
+        position: fixed;
+        left: 30%;
+        margin-top: 5px;
+      }
+      #left:checked + .box1 {
+        opacity: 1;
+      }
+      /* right */
+      .box2 {
+        position: fixed;
+        top: 3%;
+        left: 30%;
+        opacity: 0;
+      }
+
+      .container2 {
+        background-color: whitesmoke;
+        border: 2px solid grey;
+        border-radius: 25px;
+        height: 500px;
+        width: 600px;
+        display: flex;
+        justify-content: flex-end;
+      }
+      #right:checked + .box2 {
+        opacity: 1;
+      }
+      /* center */
+      .box3 {
+        position: fixed;
+        top: 3%;
+        left: 30%;
+        opacity: 0;
+      }
+
+      .container3 {
+        background-color: whitesmoke;
+        border: 2px solid grey;
+        border-radius: 25px;
+        height: 500px;
+        width: 600px;
+        display: flex;
+        justify-content: center;
+      }
+      #center:checked + .box3 {
+        opacity: 1;
+      }
+
+      /* align-items-start */
+      .box4 {
+        position: fixed;
+        top: 3%;
+        left: 30%;
+        opacity: 0;
+      }
+
+      .container4 {
+        background-color: whitesmoke;
+        border: 2px solid grey;
+        border-radius: 25px;
+        height: 500px;
+        width: 600px;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+      }
+      #align-items-start:checked + .box4 {
+        opacity: 1;
+      }
+      /* align-item-end */
+
+      .box5 {
+        position: fixed;
+
+        top: 3%;
+        left: 30%;
+        opacity: 0;
+      }
+
+      .container5 {
+        background-color: whitesmoke;
+        border: 2px solid grey;
+        border-radius: 25px;
+        height: 500px;
+        width: 600px;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+      }
+      #align-items-end:checked + .box5 {
+        opacity: 1;
+      }
+      /* align-item-center */
+
+      .box6 {
+        position: fixed;
+        left: 30%;
+        top: 3%;
+        opacity: 0;
+      }
+
+      .container6 {
+        background-color: whitesmoke;
+        border: 2px solid grey;
+        border-radius: 25px;
+        height: 500px;
+        width: 600px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #align-items-center:checked + .box6 {
+        opacity: 1;
+      }
+      /* flex-direction-row */
+
+      .box7 {
+        position: fixed;
+        left: 30%;
+        top: 3%;
+        opacity: 0;
+      }
+
+      .container7 {
+        background-color: whitesmoke;
+        border: 2px solid grey;
+        border-radius: 25px;
+        height: 500px;
+        width: 600px;
+        display: flex;
+
+        flex-direction: row;
+      }
+      #flex-direction-row:checked + .box7 {
+        opacity: 1;
+      }
+
+      /* flex-direction-column */
+      .box8 {
+        position: fixed;
+        left: 30%;
+        top: 3%;
+        opacity: 0;
+      }
+
+      .container8 {
+        background-color: whitesmoke;
+        border: 2px solid grey;
+        border-radius: 25px;
+        height: 500px;
+        width: 600px;
+        display: flex;
+        flex-direction: column;
+      }
+      #flex-direction-column:checked + .box8 {
+        opacity: 1;
+      }
+      /* flex-wrap */
+
+      .box9 {
+        position: fixed;
+        left: 30%;
+        top: 3%;
+        opacity: 0;
+      }
+
+      .container9 {
+        background-color: whitesmoke;
+        border: 2px solid grey;
+        border-radius: 25px;
+        height: 500px;
+        width: 600px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      #flex-wrap:checked + .box9 {
+        opacity: 1;
+      }
+
+      /* align-content-start */
+      .box10 {
+        position: fixed;
+        left: 30%;
+        top: 3%;
+        opacity: 0;
+      }
+
+      .container10 {
+        background-color: whitesmoke;
+        border: 2px solid grey;
+        border-radius: 25px;
+        height: 500px;
+        width: 600px;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+      }
+      #align-content-start:checked + .box10 {
+        opacity: 1;
+      }
+
+      /* align-content-end */
+      .box11 {
+        position: fixed;
+        left: 30%;
+        top: 3%;
+        opacity: 0;
+      }
+
+      .container11 {
+        background-color: whitesmoke;
+        border: 2px solid grey;
+        border-radius: 25px;
+        height: 500px;
+        width: 600px;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-end;
+      }
+      #align-content-end:checked + .box11 {
+        opacity: 1;
+      }
+      /* align-content-center */
+      .box12 {
+        position: fixed;
+        left: 30%;
+        top: 3%;
+        opacity: 0;
+      }
+
+      .container12 {
+        background-color: whitesmoke;
+        border: 2px solid grey;
+        border-radius: 25px;
+        height: 500px;
+        width: 600px;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+      }
+      #align-content-center:checked + .box12 {
+        opacity: 1;
+      }
+      /* flex-grow */
+      .box13 {
+        position: fixed;
+        left: 30%;
+        top: 3%;
+        opacity: 0;
+      }
+
+      .container13 {
+        background-color: whitesmoke;
+        border: 2px solid grey;
+        border-radius: 25px;
+        height: 500px;
+        width: 600px;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+      }
+      #grow {
+        background-color: rgba(153, 205, 50, 0.749);
+        flex-grow: 2;
+        color: black;
+      }
+      #flex-grow:checked + .box13 {
+        opacity: 1;
+      }
+      /* flex-shrink */
+      .box14 {
+        position: fixed;
+        left: 30%;
+        top: 3%;
+        opacity: 0;
+      }
+
+      .container14 {
+        background-color: whitesmoke;
+        border: 2px solid grey;
+        border-radius: 25px;
+        height: 500px;
+        width: 600px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+      }
+      #shrink {
+        background-color: rgba(153, 205, 50, 0.749);
+        flex-shrink: -3;
+        color: black;
+      }
+      .shrink {
+        height: 120px;
+        width: 120px;
+      }
+      #flex-shrink:checked + .box14 {
+        opacity: 1;
+      }
+
+      /* align-self */
+      .box15 {
+        position: fixed;
+        left: 30%;
+        top: 3%;
+        opacity: 0;
+      }
+
+      .container15 {
+        background-color: whitesmoke;
+        border: 2px solid grey;
+        border-radius: 25px;
+        height: 500px;
+        width: 600px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+      }
+      .a-self {
+        align-self: center;
+        color: black;
+        background-color: rgba(153, 205, 50, 0.749);
+      }
+
+      #align-self:checked + .box15 {
+        opacity: 1;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="pro">
+      <h2>Control Panel 
+        
+      </h2>
+      <h3>Flex Directions</h3>
+      <label for="flex-direction-row"><span>Row</span></label>
+      <label for="flex-direction-column"><span>Column</span></label>
+      <h3>Main Axis</h3>
+      <label for="left"> <span>Left</span></label>
+      <label for="right"> <span>Right</span></label>
+      <label for="center"> <span>Center</span></label>
+      <label for="space-between"><span>Space-Between</span></label>
+      <label for="flex-wrap"><span>Flex-Wrap</span></label>
+      <h3>Cross Axis</h3>
+      <h5>Items</h5>
+      <label for="align-items-start"><span>Align-Items-Start</span></label>
+      <label for="align-items-end"><span>Align-Items-End</span></label>
+      <label for="align-items-center"><span>Align-Items-Center</span></label>
+      <h5>Content</h5>
+      <label for="align-content-start"><span>Align-Content-Start</span></label>
+      <label for="align-content-end"><span>Align-Content-End</span></label>
+      <label for="align-content-center"
+        ><span>Align-Content-Center</span></label
+      >
+      <h5>Other</h5>
+      <label for="flex-grow"><span>Flex-Grow</span></label>
+      <label for="flex-shrink"><span>Flex-Shrink</span></label>
+      <label for="align-self"><span>Align-Self</span></label>
+    </div>
+
+    <!-- space-between -->
+    <input type="radio" id="space-between" name="pro" />
+    <div class="box">
+      <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+      </div>
+      <div class="code">
+        .class-name {<br />
+        display:flex;<br />
+        justify-content:<b>space-bteween;</b><br />
+        <b>space-around;</b><br />
+        <b>space-evenly;</b><br />
+        }<br />
+      </div>
+    </div>
+
+    <!-- Left -->
+    <input type="radio" id="left" name="pro" />
+    <div class="box1">
+      <div class="container1">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+      </div>
+      <div class="code">
+        .class-name {<br />
+        display:flex;<br />
+        justify-content:<b>start</b>;<br />
+        }<br />
+      </div>
+    </div>
+
+    <!-- right -->
+    <input type="radio" id="right" name="pro" />
+    <div class="box2">
+      <div class="container2">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+      </div>
+      <div class="code">
+        .class-name {<br />
+        display:flex;<br />
+        justify-content:<b>end;</b><br />
+        }<br />
+      </div>
+    </div>
+
+    <!-- center -->
+    <input type="radio" id="center" name="pro" />
+    <div class="box3">
+      <div class="container3">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+      </div>
+      <div class="code">
+        .class-name {<br />
+        display:flex;<br />
+        justify-content:<b>center;</b><br />
+        }<br />
+      </div>
+    </div>
+
+    <!-- align-items-start -->
+
+    <input type="radio" id="align-items-start" name="pro" />
+    <div class="box4">
+      <div class="container4">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+      </div>
+      <div class="code">
+        .class-name {<br />
+        display:flex;<br />
+        justify-content:center;<br />
+        align-items:<b>start;</b><br />
+        }<br />
+      </div>
+    </div>
+
+    <!-- align-items-end -->
+    <input type="radio" id="align-items-end" name="pro" />
+    <div class="box5">
+      <div class="container5">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+      </div>
+      <div class="code">
+        .class-name {<br />
+        display:flex;<br />
+        justify-content:center;
+        <br />align-items:<b>end;</b><br />
+        }<br />
+      </div>
+    </div>
+    <!-- align-item-center -->
+    <input type="radio" id="align-items-center" name="pro" />
+    <div class="box6">
+      <div class="container6">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+      </div>
+      <div class="code">
+        .class-name {<br />
+        display:flex;<br />
+        justify-content:center;
+        <br />align-items:<b>center;</b><br />
+        }<br />
+      </div>
+    </div>
+
+    <!-- flex directions-row -->
+    <input type="radio" id="flex-direction-row" name="pro" />
+    <div class="box7">
+      <div class="container7">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+      </div>
+      <div class="code">
+        .class-name {<br />
+        display:flex;<br />
+        flex-direction:<b>row; & row-reverse;</b>{ default-style } <br />
+
+        }<br />
+      </div>
+    </div>
+
+    <!-- flex directions-column -->
+
+    <input type="radio" id="flex-direction-column" name="pro" />
+    <div class="box8">
+      <div class="container8">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+      </div>
+      <div class="code">
+        .class-name {<br />
+        display:flex;<br />
+        flex-direction:<b>column; & column-reverse;</b><br />
+
+        }<br />
+      </div>
+    </div>
+
+    <!-- flex-wrap -->
+
+    <input type="radio" id="flex-wrap" name="pro" />
+    <div class="box9">
+      <div class="container9">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+        <div class="item">11</div>
+        <div class="item">12</div>
+        <div class="item">13</div>
+        <div class="item">14</div>
+        <div class="item">15</div>
+      </div>
+      <div class="code">
+        .class-name {<br />
+        display:flex;<br />
+        flex-direction:row;<br />
+        justify-content:start;<br />
+        flex-wrap:<b>wrap; & wrap-reverse</b>{default:nowrap}<br />
+
+        }<br />
+      </div>
+    </div>
+
+    <!-- align-content-start -->
+    <input type="radio" id="align-content-start" name="pro" />
+    <div class="box10">
+      <div class="container10">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+        <div class="item">11</div>
+        <div class="item">12</div>
+        <div class="item">13</div>
+        <div class="item">14</div>
+        <div class="item">15</div>
+      </div>
+      <div class="code">
+        .class-name {<br />
+        display:flex;<br />
+        flex-direction:row;<br />
+        justify-content:start;<br />
+        flex-wrap:wrap;<br />
+        align-content: <b>flex-start;</b><br />
+
+        }<br />
+      </div>
+    </div>
+
+    <!-- align-content-end -->
+    <input type="radio" id="align-content-end" name="pro" />
+    <div class="box11">
+      <div class="container11">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+        <div class="item">11</div>
+        <div class="item">12</div>
+        <div class="item">13</div>
+        <div class="item">14</div>
+        <div class="item">15</div>
+      </div>
+      <div class="code">
+        .class-name {<br />
+        display:flex;<br />
+        flex-direction:row;<br />
+        justify-content:start;<br />
+        flex-wrap:wrap;<br />
+        align-content: <b>flex-end;</b><br />
+
+        }<br />
+      </div>
+    </div>
+
+    <!-- align-content-center -->
+    <input type="radio" id="align-content-center" name="pro" />
+    <div class="box12">
+      <div class="container12">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+        <div class="item">11</div>
+        <div class="item">12</div>
+        <div class="item">13</div>
+        <div class="item">14</div>
+        <div class="item">15</div>
+      </div>
+      <div class="code">
+        .class-name {<br />
+        display:flex;<br />
+        flex-direction:row;<br />
+        justify-content:start;<br />
+        flex-wrap:wrap;<br />
+        align-content:<b>center;</b><br />
+
+        }<br />
+      </div>
+    </div>
+    <!-- Flex-grow -->
+    <input type="radio" id="flex-grow" name="pro" />
+    <div class="box13">
+      <div class="container13">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item" id="grow">9</div>
+        <div class="item">10</div>
+        <div class="item">11</div>
+        <div class="item">12</div>
+        <div class="item">13</div>
+        <div class="item">14</div>
+        <div class="item">15</div>
+      </div>
+      <div class="code">
+        Specific ID name<br />
+        #grow<br />
+        {<br />
+        flex-grow:<b> 2;</b><br />
+        }<br />
+        <br />
+      </div>
+    </div>
+    <!-- flex-shrink -->
+
+    <input type="radio" id="flex-shrink" name="pro" />
+    <div class="box14">
+      <div class="container14">
+        <div class="item shrink">1</div>
+        <div class="item shrink">2</div>
+        <div class="item" id="shrink">3</div>
+        <div class="item shrink">4</div>
+        <div class="item shrink">5</div>
+        <div class="item shrink">6</div>
+        <div class="item shrink">7</div>
+        <div class="item shrink">8</div>
+        <div class="item shrink">9</div>
+        <div class="item shrink">10</div>
+        <div class="item shrink">11</div>
+        <div class="item shrink">12</div>
+        <div class="item shrink">13</div>
+        <div class="item shrink">14</div>
+        <div class="item shrink">15</div>
+      </div>
+      <div class="code">
+        Specific ID name<br />
+        #shrink<br />
+        {<br />
+        flex-shrink:<b> -3;</b><br />
+        }<br />
+        <br />
+      </div>
+    </div>
+
+    <!-- align-self -->
+
+    <input type="radio" id="align-self" name="pro" />
+    <div class="box15">
+      <div class="container15">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item a-self">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item a-self">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item a-self">9</div>
+      </div>
+      <div class="code">
+        Specific ID/Clss name<br />
+        .a-self<br />
+        {<br />
+        align-self:<b> center;</b><br />
+        }<br />
+        <br />
+      </div>
+    </div>
+  </body>
+</html>
